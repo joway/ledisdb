@@ -104,6 +104,6 @@ ADD entrypoint.sh /bin/entrypoint.sh
 
 ENTRYPOINT ["entrypoint.sh"]
 
-EXPOSE 6380 11181
+EXPOSE 6381 11181
 
 CMD ["ledis-server", "--config=/config.toml"]

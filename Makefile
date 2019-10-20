@@ -19,7 +19,7 @@ build:
 	go build -o bin/ledis-benchmark -tags '$(GO_BUILD_TAGS)' cmd/ledis-benchmark/*
 	go build -o bin/ledis-dump -tags '$(GO_BUILD_TAGS)' cmd/ledis-dump/*
 	go build -o bin/ledis-load -tags '$(GO_BUILD_TAGS)' cmd/ledis-load/*
-	go build -o bin/ledis-repair -tags '$(GO_BUILD_TAGS)' cmd/ledis-repair/*
+	go build -o bin/ledis-repair -tags 'c$(GO_BUILD_TAGS)' cmd/ledis-repair/*
 
 test:
 	go test --race -tags '$(GO_BUILD_TAGS)' -timeout 2m $$(go list ./... | grep -v -e /vendor/)
